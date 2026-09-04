@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seyfuddin Prime School | Excellence in Education</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              navy: '#0F172A',
+              gold: '#D97706',
+              goldHover: '#B45309',
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+  <header class="bg-slate-900 text-white sticky top-0 z-40 shadow-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-amber-500 tracking-tight">Seyfuddin Prime School</a>
+      
+      <nav class="hidden md:flex space-x-8 text-sm font-medium">
+        <a href="#about" class="hover:text-amber-400 transition">About Us</a>
+        <a href="#faculty" class="hover:text-amber-400 transition">Faculty</a>
+        <a href="#news" class="hover:text-amber-400 transition">News & Events</a>
+        <a href="#gallery" class="hover:text-amber-400 transition">Gallery</a>
+      </nav>
+      
+      <div class="hidden md:block">
+        <button onclick="openModal()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-5 py-2.5 rounded-lg text-sm transition shadow-sm">
+          Apply Now
+        </button>
+      </div>
+
+      <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle Navigation">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-800 px-6 py-4 space-y-3 border-t border-slate-700">
+      <a href="#about" class="block text-slate-200 hover:text-amber-400">About Us</a>
+      <a href="#faculty" class="block text-slate-200 hover:text-amber-400">Faculty</a>
+      <a href="#news" class="block text-slate-200 hover:text-amber-400">News & Events</a>
+      <a href="#gallery" class="block text-slate-200 hover:text-amber-400">Gallery</a>
+      <button onclick="openModal()" class="w-full text-center bg-amber-600 text-slate-950 font-bold py-2 rounded-lg mt-2">
+        Apply Now
+      </button>
+    </div>
+  </header>
+
+  <section class="relative bg-slate-900 text-white py-16 lg:py-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <div class="lg:col-span-7 space-y-6">
+        <span class="inline-block bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">
+          Admissions Open 2026–2027
+        </span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
+          Empowering Tomorrow's Leaders at <span class="text-amber-500">Seyfuddin Prime</span>
+        </h1>
+        <p class="text-slate-300 text-lg max-w-xl">
+          A commitment to academic excellence, character development, and future-ready STEM innovation.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 pt-2">
+          <button onclick="openModal()" class="bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold px-6 py-3.5 rounded-xl shadow-lg transition text-center">
+            Apply for Admission
+          </button>
+          <a href="#about" class="bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-semibold px-6 py-3.5 rounded-xl transition text-center">
+            Explore Campus
+          </a>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="relative">
+          <img 
+            src="images/hero.jpg" 
+            alt="Seyfuddin Prime School Campus" 
+            class="rounded-2xl shadow-2xl border-2 border-slate-800 w-full object-cover h-80 lg:h-[420px]"
+          >
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+      <div class="md:col-span-5">
+        <img 
+          src="images/principal.jpg" 
+          alt="School Principal" 
+          class="rounded-2xl shadow-lg w-full object-cover h-96"
+        >
+      </div>
+      <div class="md:col-span-7 space-y-4">
+        <span class="text-xs font-bold uppercase text-amber-600 tracking-wider">Leadership Message</span>
+        <h2 class="text-3xl font-bold text-slate-900">Welcome from Our Principal</h2>
+        <p class="text-slate-600 leading-relaxed">
+          At Seyfuddin Prime School, we provide an environment where academic curiosity meets strong moral values. Our mission is to guide every student toward reaching their highest potential through personalized instruction and modern learning practices.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faculty" class="py-20 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-slate-900">Meet Our Educators</h2>
+        <p class="text-slate-600 mt-2">Dedicated teachers committed to academic excellence.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <div class="bg-white rounded-xl shadow-md overflow-hidden text-center p-6 border border-slate-200">
+          <img src="images/teacher1.jpg" alt="Faculty Member" class="w-28 h-28 rounded-full mx-auto object-cover mb-4">
+          <h3 class="font-bold text-lg text-slate-900">Teacher 1</h3>
+          <p class="text-xs text-amber-600 font-semibold uppercase mt-1">STEM Lead</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden text-center p-6 border border-slate-200">
+          <img src="images/teacher2.jpg" alt="Faculty Member" class="w-28 h-28 rounded-full mx-auto object-cover mb-4">
+          <h3 class="font-bold text-lg text-slate-900">Teacher 2</h3>
+          <p class="text-xs text-amber-600 font-semibold uppercase mt-1">Humanities</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden text-center p-6 border border-slate-200">
+          <img src="images/teacher3.jpg" alt="Faculty Member" class="w-28 h-28 rounded-full mx-auto object-cover mb-4">
+          <h3 class="font-bold text-lg text-slate-900">Teacher 3</h3>
+          <p class="text-xs text-amber-600 font-semibold uppercase mt-1">Mathematics</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden text-center p-6 border border-slate-200">
+          <img src="images/teacher4.jpg" alt="Faculty Member" class="w-28 h-28 rounded-full mx-auto object-cover mb-4">
+          <h3 class="font-bold text-lg text-slate-900">Teacher 4</h3>
+          <p class="text-xs text-amber-600 font-semibold uppercase mt-1">Languages</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="news" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-slate-900">Latest News & Events</h2>
+        <p class="text-slate-600 mt-2">Highlights and updates from campus activities.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <article class="bg-slate-50 border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+          <img src="images/news1.jpg" alt="Science Fair" class="w-full h-48 object-cover">
+          <div class="p-6 space-y-2">
+            <span class="text-xs font-semibold text-amber-600">Academic Update</span>
+            <h3 class="font-bold text-slate-900 text-lg">Science & Technology Fair</h3>
+            <p class="text-sm text-slate-600">Students showcased innovative project solutions across physics and engineering.</p>
+          </div>
+        </article>
+
+        <article class="bg-slate-50 border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+          <img src="images/news2.jpg" alt="Athletics Day" class="w-full h-48 object-cover">
+          <div class="p-6 space-y-2">
+            <span class="text-xs font-semibold text-amber-600">Sports & Health</span>
+            <h3 class="font-bold text-slate-900 text-lg">Annual Athletics Day</h3>
+            <p class="text-sm text-slate-600">A day of sportsmanship, endurance, and house team competitions.</p>
+          </div>
+        </article>
+
+        <article class="bg-slate-50 border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition">
+          <img src="images/news3.jpg" alt="Orientation" class="w-full h-48 object-cover">
+          <div class="p-6 space-y-2">
+            <span class="text-xs font-semibold text-amber-600">Community</span>
+            <h3 class="font-bold text-slate-900 text-lg">Parent-Teacher Orientation</h3>
+            <p class="text-sm text-slate-600">Building strong home-school partnerships for upcoming terms.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="py-20 bg-slate-900 text-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-slate-100">Campus Life Gallery</h2>
+        <p class="text-slate-400 mt-2">A look inside student life at Seyfuddin Prime School.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <img src="images/gallery1.jpg" alt="Campus Facilities" class="rounded-xl object-cover h-64 w-full shadow-lg">
+        <img src="images/gallery2.jpg" alt="Classroom Engagement" class="rounded-xl object-cover h-64 w-full shadow-lg">
+        <img src="images/gallery3.jpg" alt="Extracurricular Activities" class="rounded-xl object-cover h-64 w-full shadow-lg">
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 text-center space-y-4">
+      <p class="text-slate-100 font-bold text-lg">Seyfuddin Prime School</p>
+      <p class="text-sm">Excellence in Education & Character Development</p>
+      <p class="text-xs text-slate-500 pt-4">&copy; 2026 Seyfuddin Prime School. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="modal-backdrop" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+    
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-md w-full p-6 text-slate-100 relative shadow-2xl">
+      <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-1" aria-label="Close Modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <div id="form-container">
+        <h3 class="text-xl font-bold text-white mb-1">Admissions Application</h3>
+        <p class="text-xs text-slate-400 mb-6">Fill in your details and our team will contact you shortly.</p>
+
+        <form id="admissions-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+          <div>
+            <label class="block text-xs font-semibold uppercase text-slate-300 mb-1">Parent Name</label>
+            <input type="text" required placeholder="Full Name" class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-amber-500">
+          </div>
+          
+          <div>
+            <label class="block text-xs font-semibold uppercase text-slate-300 mb-1">Phone Number</label>
+            <input type="tel" required placeholder="+251 9..." class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-amber-500">
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold uppercase text-slate-300 mb-1">Target Grade</label>
+            <select class="w-full bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:ring-2 focus:ring-amber-500">
+              <option>Grade 9</option>
+              <option>Grade 10</option>
+              <option>Grade 11</option>
+              <option>Grade 12</option>
+            </select>
+          </div>
+
+          <button type="submit" class="w-full bg-amber-600 hover:bg-amber-500 text-slate-950 font-bold py-2.5 rounded-lg text-sm transition mt-2">
+            Submit Application
+          </button>
+        </form>
+      </div>
+
+      <div id="success-message" class="hidden text-center py-6 space-y-3">
+        <div class="w-12 h-12 bg-emerald-500/10 text-emerald-400 rounded-full flex items-center justify-center mx-auto border border-emerald-500/20">
+          ✓
+        </div>
+        <h4 class="text-lg font-bold text-white">Application Received</h4>
+        <p class="text-xs text-slate-300">Thank you for applying. We will review your submission and contact you soon.</p>
+        <button onclick="closeModal()" class="px-4 py-2 bg-slate-800 text-xs font-semibold text-slate-200 rounded-lg">
+          Close
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close Mobile Menu on Link Click
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+
+    // Modal Control Functions
+    const modalBackdrop = document.getElementById('modal-backdrop');
+    const formContainer = document.getElementById('form-container');
+    const successMessage = document.getElementById('success-message');
+
+    function openModal() {
+      modalBackdrop.classList.remove('hidden');
+    }
+
+    function closeModal() {
+      modalBackdrop.classList.add('hidden');
+      // Reset state after transition
+      setTimeout(() => {
+        formContainer.classList.remove('hidden');
+        successMessage.classList.add('hidden');
+        document.getElementById('admissions-form').reset();
+      }, 300);
+    }
+
+    // Form Submission Handling
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      formContainer.classList.add('hidden');
+      successMessage.classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
